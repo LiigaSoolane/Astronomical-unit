@@ -1,52 +1,51 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from uncertainties import ufloat
 from uncertainties import unumpy as unp
+import uncertainties as uno
 from scipy.optimize import curve_fit
 
 # read values
 image,idd,otime,xcenter,ycenter,ifilter,mag,merr = np.genfromtxt('bxpeg.txt', unpack=True)
 
-print(ifilter)
+
+stars=unp.uarray(mag, merr)
+print(stars)
 # We look at 6540/3=2180 images /3 -> 726 images each
-vdiff21 = np.zeros(726, dtype=float)
-vdiff31 = np.zeros(726, dtype=float)
-vdiff32 = np.zeros(726, dtype=float)
+vdiff = np.array([stars[0:726], stars[0:726], stars[0:726]])
 vtime = np.zeros(726, dtype=float)
-bdiff21 = np.zeros(726, dtype=float)
-bdiff31 = np.zeros(726, dtype=float)
-bdiff32 = np.zeros(726, dtype=float)
+bdiff = np.array([stars[0:726], stars[0:726], stars[0:726]])
 btime = np.zeros(726, dtype=float)
-rdiff21 = np.zeros(726, dtype=float)
-rdiff31 = np.zeros(726, dtype=float)
-rdiff32 = np.zeros(726, dtype=float)
+rdiff =  np.array([stars[0:726], stars[0:726], stars[0:726]])
 rtime = np.zeros(726, dtype=float)
 
 i=0
 a=0
-while (i<726):
-    vdiff21[a] = mag[i+1]-mag[i]
-    vdiff31[a] = mag[i+2]-mag[i]
-    vdiff32[a] = mag[i+2]-mag[i+1]
-    vtime[a] = otime[i]
-    bdiff21[a+1] = mag[i+1+3]-mag[3+i]
-    bdiff31[a+1] = mag[i+2+3]-mag[3+i]
-    bdiff32[a+1] = mag[i+2+3]-mag[3+i+1]
-    btime[a+1] = otime[i+3]
-    rdiff21[a+1] = mag[i+1+3]-mag[3+i]
-    rdiff31[a+1] = mag[i+2+3]-mag[3+i]
-    rdiff32[a+1] = mag[i+2+3]-mag[3+i+1]
-    rtime[a+1] = otime[i+3]
+while (a<726):
+
+    bdiff[0,a] = stars[i+1]-stars[i]
+    bdiff[1,a] = stars[i+2]-stars[i]
+    bdiff[2,a] = stars[i+2]-stars[i+1]
+    vdiff[0,a] = stars[i+4]-stars[3+i]
+    vdiff[1,a] = stars[i+5]-stars[3+i]
+    vdiff[2,a] = stars[i+5]-stars[4+i]
+    rdiff[0,a] = mag[i+7]-mag[6+i]
+    rdiff[1,a] = mag[i+8]-mag[6+i]
+    rdiff[2,a] = mag[i+8]-mag[7+i]
+    vtime[a] = otime[i+3]
+    rtime[a] = otime[i+6]
+    btime[a] = otime[i]
     i=i+9
-    a=a+3
+    a=a+1
 
 
 
-print(rdiff21)
+print(vdiff)
 
 plt.clf()
-plt.plot(rtime, rdiff21, 'r.', label='Messwerte')
+#plt.plot(rtime, r, 'r.', label='Messwerte')
 #plt.plot(lam_plot, params[0]*lam_plot + params[1], '-', label='Lineare Regression')
-#plt.errorbar(lam, unp.nominal_values(T), yerr=unp.std_devs(T), fmt='r_')
+plt.errorbar(vtime, vdiff[0,:], fmt='r_')
 #plt.legend()
 #plt.xlabel(r'Wellenlänge $\lambda$')
 #plt.ylabel(r'Transmission')
