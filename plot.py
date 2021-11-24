@@ -92,3 +92,19 @@ plt.ylabel(r'difference between SW Lac and comparison star')
 plt.savefig('R-Filter.pdf')
 #################################################################################
 
+period = 0.3207209
+epoch = 49594.4684
+vtime[:] = [((x - 2400000 - epoch)%period)/period for x in vtime]
+btime[:] = [((x - 2400000 - epoch)%period)/period for x in btime]
+rtime[:] = [((x - 2400000 - epoch)%period)/period for x in rtime]
+
+plt.figure(3)
+plt.errorbar(vtime, unp.nominal_values(np.array(vdiff[0,:])), yerr=unp.std_devs(vdiff[0,:]), xerr=None, fmt='gx', linewidth=0.05, label='diff21')
+plt.errorbar(btime, unp.nominal_values(np.array(bdiff[1,:])), yerr=unp.std_devs(bdiff[1,:]), xerr=None, fmt='bx', linewidth=0.05)
+plt.errorbar(rtime, unp.nominal_values(np.array(rdiff[2,:])), yerr=unp.std_devs(rdiff[2,:]), xerr=None, fmt='rx', linewidth=0.05)
+plt.legend()
+plt.xlabel(r'local time [s]')
+plt.ylabel(r'difference between SW Lac and comparison star')
+plt.savefig('Phase.pdf')
+
+
