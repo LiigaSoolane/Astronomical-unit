@@ -1,0 +1,42 @@
+\section{Data Reduction}
+\label{sec:data}
+
+The data collected was imported into IRAF to correct the object images using our Bias, 
+Dark and Flat images. The images that were affected by the camera shutter malfunctioning 
+had to be discarded. This caused the stars in our images to streak and added uneven exposure 
+to our image frame. After discarding our bad files, the remaining observations were run 
+through the CCDPROC procedure in IRAF to reduce the object data. The first step was to 
+set our instrument to the “blt” using “setinstrument” in IRAF. Then run zerocombine, 
+darkcomine, flatcombine and ccdproc (found in the packages NOAO, IMRED, and CCDRED). 
+Zerocombine selects the bias images from our dataset and combines them into a master 
+bias image. Darkcombine selects the dark images to create a master dark and subtracts 
+the master bias, then scales them by exposure time and combines them. Flatcombine selects 
+flat-field images then bias and dark subtracts them, scales to the modes and combines 
+them in each filter to create master flats in each filter. Next, we used the task setjd 
+(found in the ASTUTIL package) to calculate and add the Julian Date keywords to our dataset. 
+Within the parameters for this task we set the observatory to “aro”, the date keyword, the 
+“ut” time keyword, exposure time keyword, right ascension (in hours) keyword, and the declination 
+(in degrees) keyword. Additionally, we set the “utdate” and “uttime” parameters to yes 
+because our observation date and time is in UT. \\
+
+The field is in two different orientations caused by flipping the telescope at the meridian. 
+The meridian flip began at $20211105_ 1055$.fit. The object was labeled as $1$ and two comparison 
+stars and $2$ and $3$. One image was chosen before the meridian flip and one image after to record
+the x and y coordinates and the Full Width at Half Max (FWHM) value for the object and 
+comparison stars. For the image East of the Meridian our x and y coordinate for the 
+object was $(489.89, 800.88)$, for comparison star $1$ was $(235.13, 460.29)$ and for comparison 
+star $2$ was $(762.15, 365.42)$. The FWHM value for the object was $4.80$, for comparison star 
+$1$ was $5.03$ and for comparison star $2$ was $5.00$. For the image West of the Meridian our x and 
+y coordinate for the object was $(425.08, 95.35)$, for comparison star 1 was $(682.16, 434.13)$ 
+and for comparison star 2 was $(156.04, 532.72)$. The FWHM value for the object was 5.26, for 
+comparison star $1$ was $4.95$ and for comparison star 2 was $4.72$. The average FWHM value was $4.92$. 
+To confirm the FWHM value was approximately uniform throughout the observation window we 
+checked several random images. To confirm the autoguider was functioning properly we used 
+imexamine to verify the coordinates of the three stars matched within 5 pixels. \\
+
+As the final step, photometry was performed on the object and comparison stars. 
+The aperture was set to the FWHM average value and the annulus to three times of 
+FWHM average value. The IRAF command “phot” was used non-interactively with east 
+and west lists that contained the coordinates of the object and comparison stars 
+before and after the meridian flip. Finally, the IRAF command “txdump” was used to 
+extract the photometry data from the mag-files to analyze the final data. 

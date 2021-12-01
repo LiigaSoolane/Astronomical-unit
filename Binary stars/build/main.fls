@@ -444,10 +444,14 @@ INPUT build/main.toc
 INPUT build/main.toc
 INPUT build/main.toc
 OUTPUT build/main.toc
-INPUT ./content/theorie.tex
-INPUT ./content/theorie.tex
-INPUT ./content/durchfuehrung.tex
-INPUT ./content/durchfuehrung.tex
+INPUT ./content/abstract.tex
+INPUT ./content/abstract.tex
+INPUT ./content/introduction.tex
+INPUT ./content/introduction.tex
+INPUT ./content/observation.tex
+INPUT ./content/observation.tex
+INPUT ./content/data.tex
+INPUT ./content/data.tex
 INPUT ./content/result.tex
 INPUT ./content/result.tex
 INPUT build/plot.pdf
@@ -463,7 +467,6 @@ INPUT build/plot.pdf
 INPUT build/plot.pdf
 INPUT build/plot.pdf
 INPUT build/plot.pdf
-INPUT /home/toni/.local/texlive/2020/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
 INPUT build/main.aux
 INPUT build/main.aux
 INPUT build/main.toc

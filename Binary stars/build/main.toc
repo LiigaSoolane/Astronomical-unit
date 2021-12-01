@@ -1,12 +1,13 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
-\contentsline {section}{\numberline {1}Theorie}{3}{section.1}%
-\contentsline {section}{\numberline {2}Durchführung}{3}{section.2}%
-\contentsline {section}{\numberline {3}Results and Conclusions}{3}{section.3}%
-\contentsline {subsection}{\numberline {3.1}data}{3}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Ensemble Photometry}{3}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Phase}{5}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Conclusion}{6}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Discussion}{6}{subsection.3.5}%
-\contentsline {section}{\nonumberline References}{6}{section*.7}%
+\contentsline {section}{\numberline {1}Abstract}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {section}{\numberline {3}Observations}{3}{section.3}%
+\contentsline {section}{\numberline {4}Data Reduction}{4}{section.4}%
+\contentsline {section}{\numberline {5}Results and Conclusions}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}data}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Ensemble Photometry}{5}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Phase}{7}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Conclusion}{7}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Discussion}{8}{subsection.5.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
