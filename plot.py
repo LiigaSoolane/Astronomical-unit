@@ -15,8 +15,8 @@ def get_seconds(time_str):
     ss = []
     for value in time_str:
         hh.append(float(value.split(':')[0]))
-        hh.append(float(value.split(':')[1]))
-        hh.append(float(value.split(':')[2]))
+        mm.append(float(value.split(':')[1]))
+        ss.append(float(value.split(':')[2]))
     return hh * 3600 + mm * 60 + ss
 ########################################################
 #constants
