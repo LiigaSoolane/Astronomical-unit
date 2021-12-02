@@ -167,18 +167,23 @@ gbs1, gbs1err, gbs2, gbs2err, gbs3, gbs3err, gbHJD, gb21, gb31, gb32, gbepoch, g
 gvs1, gvs1err, gvs2, gvs2err, gvs3, gvs3err, gbHJD, gv21, gv31, gv32, gvepoch, gverr32, gverr21, gverr31, doof, gvphase = np.genfromtxt('datagv.txt', dtype='float', delimiter=None, skip_header=1, names=None, unpack=True)
 grs1, grs1err, grs2, grs2err, grs3, grs3err, gbHJD, gr21, gr31, gr32, grepoch, grerr32, grerr21, grerr31, grphase = np.genfromtxt('datagr.txt', dtype='float', delimiter=None, skip_header=1, names=None, unpack=True)
 
+for i in (0, len(gbphase)-1):
+    gbphase[i]=gbphase[i]+0.647
+    if (gbphase[i]>1):
+        gbphase[i]=gbphase[i]-1
+
 k=k+1
 plt.figure(k)
+plt.errorbar(gbphase, gb21-0.51, yerr=gberr21, xerr=None, fmt='bx', linewidth=0.05, label='diff21 from supplementary data', markersize=1)
+plt.errorbar(gvphase, gv21-0.66, yerr=gverr21, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
+plt.errorbar(grphase, gr31, yerr=grerr31, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
 plt.errorbar(vtime, unp.nominal_values(np.array(vdiff[0,:])), yerr=unp.std_devs(vdiff[0,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, label='diff21', markersize=1)
 plt.errorbar(btime, unp.nominal_values(np.array(bdiff[1,:])), yerr=unp.std_devs(bdiff[1,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, markersize=1)
 plt.errorbar(rtime, unp.nominal_values(np.array(rdiff[2,:])), yerr=unp.std_devs(rdiff[2,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, markersize=1)
-plt.errorbar(gbphase+0.147, gb21, yerr=gberr21, xerr=None, fmt='bx', linewidth=0.05, label='diff21 from supplementary data', markersize=1)
-plt.errorbar(gvphase+0.147, gv21, yerr=gverr21, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
-plt.errorbar(grphase+0.147, gr31, yerr=grerr31, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
 plt.legend()
-#plt.title("Light Curve for SW Lac" )
+plt.title("Light Curve for SW Lac" )
 plt.xlabel(r'Phase')
-plt.ylabel(r'Magnitude difference between SW Lac and comparison star')
+plt.ylabel(r'$\delta$ mag between SW Lac and comparison star')
 plt.savefig('gdPhase.pdf')
 
 ############################################################################################
