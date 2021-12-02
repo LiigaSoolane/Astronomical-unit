@@ -457,6 +457,9 @@ INPUT ./content/result.tex
 INPUT ./Magnitude.pdf
 INPUT ./Magnitude.pdf
 INPUT ./Magnitude.pdf
+INPUT /home/toni/.local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
+INPUT /home/toni/.local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /home/toni/.local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT ./WestHA~2.jpg
 INPUT ./WestHA~2.jpg
 INPUT ./WestHA~2.jpg

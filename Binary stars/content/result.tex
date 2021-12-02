@@ -7,10 +7,16 @@
   \begin{figure}[H]
     \centering
     \includegraphics{Magnitude.pdf}
-    \caption{Magnitude of SW Lacertae}
+    \caption{Magnitude of SW Lacertae in B-, V-, and R-filters; 
+    data was collected with CCD photoplates at 11 05 2021 (UT) at the $0.5$ meter Lutz telescope
+    at Northern Arizona University}
   \end{figure}
-  Additionally, data from the two comparison stars was taken and 
-  the uncertainties were calculated with the package uncertainties from python (cite package).
+  Additionally, data from the two comparison stars was taken. The gap in the data originates from 
+  the meridian flip. When an observed object crosses the meridian, the telescope has to be directed 
+  to the other side of the sky (East and West). During this operation, there are obviosly no
+  images taken.\\
+  The uncertainties in the following procedure were calculated with the package 
+  uncertainties from python \ref{cit:pyt}.
 
 \subsection{Ensemble Photometry}
   \label{sec:great}
@@ -37,7 +43,8 @@
   \begin{figure}[H]
     \centering
     \includegraphics{V-Filter.pdf}
-    \caption{Magnitude Difference between SW Lacertae and TYC 3215-1586-1}
+    \caption{Magnitude Difference between SW Lacertae and TYC 3215-1586-1 in V-Filter. Data 
+    was collected at the }
     \label{fig:plot}
   \end{figure}
 
@@ -57,7 +64,7 @@
   \begin{equation}
     phase = \dfrac{((E_{measurements}-E_{min})\ \% \ period)}{period}.
   \end{equation}
-  This leads us to the following results:
+  This leads to the following results:
   \begin{figure}[H]
     \centering
     \includegraphics{gdPhase.pdf}
@@ -65,25 +72,27 @@
     \ref{ref:gor}. Their data is phase-shifted, so that it matches with our observations.}
     \label{fig:phase}
   \end{figure}
-  In this graphic, data gathered from another group \ref{ref:gor} is included. 
+  The smaller gap in our data is, as mentioned before, caused by the meridian flip. 
+  Due to difficulties whith the telescope shutter, the observations had to be terminated, 
+  before a whole period could be observed. Therefore, there is a bigger gap in the 
+  data. For this reason, data gathered from another group \ref{ref:gor} is included. 
   They observed this binary star system at the same observatory. Since their
   observation, a phaseshift occured. In order to fill the gaps in our data,
   a phase of $+0.647$ was added. Due to the fact, that Gordons group used other 
   comparison star and different exposure times, the light curves are also shifted in their
   magnitude. Therefore, the magnitude of the other groups data was also shifted
-  by $-0.  $ for V-filter and $-0. $ for B-filter.
-  The smaller gap in our data is, as mentioned before, caused by the meridian flip. 
-  Due to difficulties while observing, 
+  by $-0.  $ for V-filter and $-0. $ for B-filter.\\
+ 
 
 \subsection{Conclusion}
   \label{sec:fuckoff}
   On account of difficulties, which occured while recording the data, a full period could not
   be observed. The conclusions base therefore mostly on the data, collected by the other team.
-  Saying this, the data of both observation nights fits perfectly to each other and therefore, 
-  it can be presumed, that the others group data will deliver results, which match those of our 
+  Saying this, the lightcurves of both observation nights fits perfectly to each other and therefore, 
+  it can be presumed, that the supplementary data will deliver results, which match those of our 
   observations.\\
   It can be clearly seen in plot \ref{fig:phase}, that there is an offset of the first minimum 
-  and $phase = 0$. That implies a period change of the system. This developement should be 
+  and $phase = 0$ of $. That implies a period change of the system. This developement should be 
   further researched, because it could lead to new knowlegde on mass transfer of contact binary
   star systems.
 

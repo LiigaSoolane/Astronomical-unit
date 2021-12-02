@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib
 import numpy as np
 from uncertainties import ufloat
 from uncertainties import unumpy as unp
@@ -103,9 +104,9 @@ plt.errorbar(vtime, unp.nominal_values(np.array(vdiff[0,:])), yerr=unp.std_devs(
 #plt.errorbar(vtime, unp.nominal_values(np.array(vdiff[0,:])), yerr=unp.std_devs(vdiff[0,:]), xerr=None, fmt='g.', linewidth=0.05, label='V-Filter', markersize=1)
 #plt.errorbar(vtime, unp.nominal_values(np.array(vdiff[0,:])), yerr=unp.std_devs(vdiff[0,:]), xerr=None, fmt='g.', linewidth=0.05, label='V-Filter', markersize=1)
 plt.legend()
-plt.title('Magnitude Difference between SW Lacertae and TYC 3215-1586-1 in V-Filter')
+plt.title('Magnitude Difference between SW Lacertae and TYC 3215-1586-1')
 plt.xlabel(r'local time [s]')
-plt.ylabel(r'difference between SW Lac and comparison star')
+plt.ylabel(r'$\Delta$ mag')
 plt.savefig('V-Filter.pdf')
 
 k=k+1
@@ -167,15 +168,25 @@ gbs1, gbs1err, gbs2, gbs2err, gbs3, gbs3err, gbHJD, gb21, gb31, gb32, gbepoch, g
 gvs1, gvs1err, gvs2, gvs2err, gvs3, gvs3err, gbHJD, gv21, gv31, gv32, gvepoch, gverr32, gverr21, gverr31, doof, gvphase = np.genfromtxt('datagv.txt', dtype='float', delimiter=None, skip_header=1, names=None, unpack=True)
 grs1, grs1err, grs2, grs2err, grs3, grs3err, gbHJD, gr21, gr31, gr32, grepoch, grerr32, grerr21, grerr31, grphase = np.genfromtxt('datagr.txt', dtype='float', delimiter=None, skip_header=1, names=None, unpack=True)
 
-for i in (0, len(gbphase)-1):
+for i in range(0, len(gbphase)-1):
     gbphase[i]=gbphase[i]+0.647
     if (gbphase[i]>1):
         gbphase[i]=gbphase[i]-1
+    
+for i in range(0, len(gvphase)-1):
+    gvphase[i]=gvphase[i]+0.647
+    if (gvphase[i]>1):
+        gvphase[i]=gvphase[i]-1
+
+for i in range(0, len(grphase)-1):
+    grphase[i]=grphase[i]+0.647
+    if (grphase[i]>1):
+        grphase[i]=grphase[i]-1
 
 k=k+1
 plt.figure(k)
-plt.errorbar(gbphase, gb21-0.51, yerr=gberr21, xerr=None, fmt='bx', linewidth=0.05, label='diff21 from supplementary data', markersize=1)
-plt.errorbar(gvphase, gv21-0.66, yerr=gverr21, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
+plt.errorbar(gbphase, gb21-0.59, yerr=gberr21, xerr=None, fmt='bx', linewidth=0.05, label='diff21 from supplementary data', markersize=1)
+plt.errorbar(gvphase, gv21-0.56, yerr=gverr21, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
 plt.errorbar(grphase, gr31, yerr=grerr31, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
 plt.errorbar(vtime, unp.nominal_values(np.array(vdiff[0,:])), yerr=unp.std_devs(vdiff[0,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, label='diff21', markersize=1)
 plt.errorbar(btime, unp.nominal_values(np.array(bdiff[1,:])), yerr=unp.std_devs(bdiff[1,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, markersize=1)
@@ -183,7 +194,8 @@ plt.errorbar(rtime, unp.nominal_values(np.array(rdiff[2,:])), yerr=unp.std_devs(
 plt.legend()
 plt.title("Light Curve for SW Lac" )
 plt.xlabel(r'Phase')
-plt.ylabel(r'$\delta$ mag between SW Lac and comparison star')
+plt.ylabel(r'$\Delta$ mag')
+matplotlib.figure.figure.show()
 plt.savefig('gdPhase.pdf')
 
 ############################################################################################
