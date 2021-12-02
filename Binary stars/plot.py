@@ -187,7 +187,7 @@ k=k+1
 plt.figure(k)
 plt.errorbar(gbphase, gb21-0.59, yerr=gberr21, xerr=None, fmt='bx', linewidth=0.05, label='diff21 from supplementary data', markersize=1)
 plt.errorbar(gvphase, gv21-0.56, yerr=gverr21, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
-plt.errorbar(grphase, gr31, yerr=grerr31, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
+plt.errorbar(grphase, gr21, yerr=grerr31, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
 plt.errorbar(vtime, unp.nominal_values(np.array(vdiff[0,:])), yerr=unp.std_devs(vdiff[0,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, label='diff21', markersize=1)
 plt.errorbar(btime, unp.nominal_values(np.array(bdiff[1,:])), yerr=unp.std_devs(bdiff[1,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, markersize=1)
 plt.errorbar(rtime, unp.nominal_values(np.array(rdiff[2,:])), yerr=unp.std_devs(rdiff[2,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, markersize=1)
@@ -195,8 +195,8 @@ plt.legend()
 plt.title("Light Curve for SW Lac" )
 plt.xlabel(r'Phase')
 plt.ylabel(r'$\Delta$ mag')
-matplotlib.figure.figure.show()
-plt.savefig('gdPhase.pdf')
+
+#plt.savefig('gdPhase.pdf')
 
 ############################################################################################
 #

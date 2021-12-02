@@ -472,6 +472,8 @@ INPUT ./V-Filter.pdf
 INPUT ./gdPhase.pdf
 INPUT ./gdPhase.pdf
 INPUT ./gdPhase.pdf
+INPUT ./content/references.tex
+INPUT ./content/references.tex
 INPUT build/main.aux
 INPUT build/main.aux
 INPUT build/main.toc

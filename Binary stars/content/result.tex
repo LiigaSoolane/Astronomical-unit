@@ -1,21 +1,23 @@
 \section{Results and Conclusions}
 \label{sec:make}
 
-\subsection{data}
+\subsection{Data}
   \label{sec:America}
-  The data collected for the star's magnitude is graphically displayed in the following depiction.
+  The data collected for the magnitude of SW Lacertae is graphically displayed in the following depiction.
   \begin{figure}[H]
     \centering
     \includegraphics{Magnitude.pdf}
     \caption{Magnitude of SW Lacertae in B-, V-, and R-filters; 
-    data was collected with CCD photoplates at 11 05 2021 (UT) at the $0.5$ meter Lutz telescope
+    data was collected with a CCD array at 11 05 2021 (UT) at the $0.5$ meter Lutz telescope
     at Northern Arizona University}
   \end{figure}
-  Additionally, data from the two comparison stars was taken. The gap in the data originates from 
+  \noindent Additionally, data from the two comparison stars was taken. The gap in the data originates from 
   the meridian flip. When an observed object crosses the meridian, the telescope has to be directed 
   to the other side of the sky (East and West). During this operation, there are obviosly no
-  images taken.\\
-  The uncertainties in the following procedure were calculated with the package 
+  images taken. The slight diverge towards the meridian flip vanishes when taking the 
+  difference of magnitudes from SW Lacertae and a comparison star. This is consistent with the 
+  assumtion, that it is a telescope or light disturbance artefact.\\
+  \noindent The uncertainties in the following procedure were calculated with the package 
   uncertainties from python \ref{cit:pyt}.
 
 \subsection{Ensemble Photometry}
@@ -35,9 +37,12 @@
     \caption{Position of comparison stars in the sky; western sky on the left, eastern sky on the right}
     \label{fig:plot}
   \end{figure}
-  The comparison to two stars was utilized to reduce the likelihood of 
-  variation in the comparison star brightness and other intruding factors.
-  This nethod was conducted for each filter seperately, because of the different 
+  \noindent The comparison to two stars was utilized to reduce the likelihood of 
+  variation in the comparison star brightness and other intruding factors. The difference
+  between the two comparison stars was calculated and didn't display a certain trend.
+  Furthermore, the stationary brightness was looked up in the catalogue of the Centre de Données 
+  astronomiques de Strasbourg \ref{ref:cat}.
+  This method was conducted for each filter seperately, because of the different 
   exposure times and colors of the stars.
   The resulting data for the V-filter is shown in the following plot.
   \begin{figure}[H]
@@ -72,7 +77,7 @@
     \ref{ref:gor}. Their data is phase-shifted, so that it matches with our observations.}
     \label{fig:phase}
   \end{figure}
-  The smaller gap in our data is, as mentioned before, caused by the meridian flip. 
+  \noindent The smaller gap in our data is, as mentioned before, caused by the meridian flip. 
   Due to difficulties whith the telescope shutter, the observations had to be terminated, 
   before a whole period could be observed. Therefore, there is a bigger gap in the 
   data. For this reason, data gathered from another group \ref{ref:gor} is included. 
@@ -81,9 +86,8 @@
   a phase of $+0.647$ was added. Due to the fact, that Gordons group used other 
   comparison star and different exposure times, the light curves are also shifted in their
   magnitude. Therefore, the magnitude of the other groups data was also shifted
-  by $-0.  $ for V-filter and $-0. $ for B-filter.\\
+  by $-0.59$ for V-filter and $-0.56$ for B-filter.\\
  
-
 \subsection{Conclusion}
   \label{sec:fuckoff}
   On account of difficulties, which occured while recording the data, a full period could not
@@ -91,15 +95,16 @@
   Saying this, the lightcurves of both observation nights fits perfectly to each other and therefore, 
   it can be presumed, that the supplementary data will deliver results, which match those of our 
   observations.\\
-  It can be clearly seen in plot \ref{fig:phase}, that there is an offset of the first minimum 
-  and $phase = 0$ of $. That implies a period change of the system. This developement should be 
+  \noindent It can be clearly seen in plot \ref{fig:phase}, that there is an offset of the first minimum 
+  and $phase = 0$ of $ 0.338$. That implies a period change of the system. As can be extracted from
+  the other groups data, which had to be shifted by a phase of 
+  $+0.674$, the period change is quite big. This developement should be 
   further researched, because it could lead to new knowlegde on mass transfer of contact binary
-  star systems.
+  star systems.\\
+  \noindent As expected, the Minima are of different magnitudes. This is caused by the different brightness
+  of the two stars. The discrepancy of the magnitudes of the Maxima has a different reason. The source 
+  of this discrepancy lies in the McConnel effect. It is common for contact binary star systems 
+  and is connected to cold star spots.
 
 \subsection{Discussion}
   \label{sec:orange}
-
-
-
-
-Siehe \autoref{fig:plot}!
