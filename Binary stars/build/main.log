@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.21)  1 DEC 2021 16:57
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.21)  1 DEC 2021 17:19
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1481,36 +1481,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--36
  []
 
 [4]) (./content/result.tex
-<plot.pdf, id=52, 417.7206pt x 258.0049pt>
-File: plot.pdf Graphic file (type pdf)
-<use plot.pdf>
-Package luatex.def Info: plot.pdf  used on input line 9.
+<Magnitude.pdf, id=52, 417.7206pt x 258.0049pt>
+File: Magnitude.pdf Graphic file (type pdf)
+<use Magnitude.pdf>
+Package luatex.def Info: Magnitude.pdf  used on input line 9.
 (luatex.def)             Requested size: 417.71957pt x 258.00426pt.
- [5<build/plot.pdf>]
-<WestHA~2.jpg, id=76, 959.585pt x 847.165pt>
+ [5<./Magnitude.pdf>]
+<WestHA~2.jpg, id=83, 959.585pt x 847.165pt>
 File: WestHA~2.jpg Graphic file (type jpg)
 <use WestHA~2.jpg>
 Package luatex.def Info: WestHA~2.jpg  used on input line 26.
 (luatex.def)             Requested size: 200.0pt x 176.56552pt.
-<EastHA~2.jpg, id=77, 959.585pt x 847.165pt>
+<EastHA~2.jpg, id=84, 959.585pt x 847.165pt>
 File: EastHA~2.jpg Graphic file (type jpg)
 <use EastHA~2.jpg>
 Package luatex.def Info: EastHA~2.jpg  used on input line 28.
 (luatex.def)             Requested size: 200.0pt x 176.56552pt.
-File: plot.pdf Graphic file (type pdf)
-<use plot.pdf>
-Package luatex.def Info: plot.pdf  used on input line 39.
+<V-Filter.pdf, id=85, 417.7206pt x 258.0049pt>
+File: V-Filter.pdf Graphic file (type pdf)
+<use V-Filter.pdf>
+Package luatex.def Info: V-Filter.pdf  used on input line 39.
 (luatex.def)             Requested size: 417.71957pt x 258.00426pt.
  [6<./WestHA~2.jpg><./EastHA~2.jpg>]
-File: plot.pdf Graphic file (type pdf)
-<use plot.pdf>
-Package luatex.def Info: plot.pdf  used on input line 63.
+<gdPhase.pdf, id=91, 417.7206pt x 258.0049pt>
+File: gdPhase.pdf Graphic file (type pdf)
+<use gdPhase.pdf>
+Package luatex.def Info: gdPhase.pdf  used on input line 63.
 (luatex.def)             Requested size: 417.71957pt x 258.00426pt.
- [7])
+ [7<./V-Filter.pdf>])
 
 LaTeX Warning: Empty bibliography on input line 24.
 
-[8] (./build/main.aux)
+[8<./gdPhase.pdf>] (./build/main.aux)
 Package rerunfilecheck Info: File `main.aux' has not changed.
 (rerunfilecheck)             Checksum: 2D0E7D6BEA025CF27DE7E26795A04785;6849.
 Package rerunfilecheck Info: File `main.toc' has not changed.
@@ -1525,19 +1527,19 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35181 strings out of 479059
+ 35191 strings out of 479059
  100000,1977958 words of node,token memory allocated
  690 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 1 glyph, 21 attribute, 79 glue_spec, 12 attribute_list, 1 write nodes
-   avail lists: 1:3,2:470,3:154,4:57,5:350,6:32,7:7478,8:60,9:187,10:26,11:489
- 53457 multiletter control sequences out of 65536+600000
- 104 fonts using 36557579 bytes
+   avail lists: 1:3,2:470,3:154,4:57,5:350,6:32,7:7478,8:60,9:189,10:26,11:489
+ 53467 multiletter control sequences out of 65536+600000
+ 104 fonts using 36557435 bytes
  110i,8n,114p,10617b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
 </home/toni/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/toni/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/toni/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/toni/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/toni/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/toni/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/toni/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (8 pages, 686733 bytes).
+Output written on main.pdf (8 pages, 950007 bytes).
 
-PDF statistics: 175 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
+PDF statistics: 225 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
  25 named destinations out of 1000 (max. 131072)
  81 words of extra memory for PDF output out of 10000 (max. 100000000)
 
