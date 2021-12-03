@@ -3,7 +3,7 @@
 
 \subsection{Data}
   \label{sec:America}
-  The data collected for the magnitude of SW Lacertae is graphically displayed in the following depiction.
+  From the data collected of SW Lacertae the Magnitude over time is graphically displayed in the following depiction.
   \begin{figure}[H]
     \centering
     \includegraphics{Magnitude.pdf}
@@ -11,12 +11,11 @@
     data was collected with a CCD array at 11 05 2021 (UT) at the $0.5$ meter Lutz telescope
     at Northern Arizona University}
   \end{figure}
-  \noindent Additionally, data from the two comparison stars was taken. The gap in the data originates from 
-  the meridian flip. When an observed object crosses the meridian, the telescope has to be directed 
-  to the other side of the sky (East and West). During this operation, there are obviosly no
-  images taken. The slight diverge towards the meridian flip vanishes when taking the 
+  \noindent Additionally, data was collected of the two comparison stars. The gap in the data originates from when
+  the meridian flip occurred. When an observed object crosses the meridian, the telescope has to be directed 
+  to the other side of the sky (East and West). The slight diverge towards the meridian flip vanishes when taking the 
   difference of magnitudes from SW Lacertae and a comparison star. This is consistent with the 
-  assumtion, that it is a telescope or light disturbance artefact.\\
+  assumtion that it is a telescope or light disturbance artefact.\\
   \noindent The uncertainties in the following procedure were calculated with the package 
   uncertainties from python \ref{cit:pyt}.
 
@@ -48,8 +47,7 @@
   \begin{figure}[H]
     \centering
     \includegraphics{V-Filter.pdf}
-    \caption{Magnitude Difference between SW Lacertae and TYC 3215-1586-1 in V-Filter. Data 
-    was collected at the }
+    \caption{Magnitude Difference between SW Lacertae and TYC 3215-1586-1 in V-Filter.}
     \label{fig:plot}
   \end{figure}
 
@@ -59,13 +57,13 @@
   \begin{equation*}
     E_{measurements} = HJD - 240000000
   \end{equation*}
-  is calculated in a first step. The data for an earlier Minimum were provided by the 
+ The data for an earlier Minimum was provided by the 
   instructions for this lab. 
   \begin{align*}
     E_{min} = 49594.4684\\
     period = 0.3207209
   \end{align*}
-  The phase in comparison to the given data is retrieved through the formula
+  The phase in comparison to the given data is retrieved through the formula:
   \begin{equation}
     phase = \dfrac{((E_{measurements}-E_{min})\ \% \ period)}{period}.
   \end{equation}
@@ -77,13 +75,13 @@
     \ref{ref:gor}. Their data is phase-shifted, so that it matches with our observations.}
     \label{fig:phase}
   \end{figure}
-  \noindent The smaller gap in our data is, as mentioned before, caused by the meridian flip. 
-  Due to difficulties whith the telescope shutter, the observations had to be terminated, 
+  \noindent As mentioned before, the smaller gap in our data is caused by the meridian flip. 
+  Due to difficulties whith the telescope camera shutter, the observations had to be terminated
   before a whole period could be observed. Therefore, there is a bigger gap in the 
-  data. For this reason, data gathered from another group \ref{ref:gor} is included. 
-  They observed this binary star system at the same observatory. Since their
+  data. For this reason, data gathered from another group \ref{ref:gor} was included to complete our graph. 
+  They observed this binary star system at the same observatory the previous night. Since their
   observation, a phaseshift occured. In order to fill the gaps in our data,
-  a phase of $+0.647$ was added. Due to the fact, that Gordons group used other 
+  a phase of $+0.647$ was added. Due to the fact, that the supplementary data had other 
   comparison star and different exposure times, the light curves are also shifted in their
   magnitude. Therefore, the magnitude of the other groups data was also shifted
   by $-0.59$ for V-filter and $-0.56$ for B-filter.\\
@@ -91,11 +89,11 @@
 \subsection{Conclusion}
   \label{sec:fuckoff}
   On account of difficulties, which occured while recording the data, a full period could not
-  be observed. The conclusions base therefore mostly on the data, collected by the other team.
-  Saying this, the lightcurves of both observation nights fits perfectly to each other and therefore, 
-  it can be presumed, that the supplementary data will deliver results, which match those of our 
+  be observed. The conclusion is base primarily established on the data collected by the other team.
+ The lightcurves of both observation nights coincide with each other and therefore, 
+  it can be presumed, that the supplementary data will deliver results that match those of our 
   observations.\\
-  \noindent It can be clearly seen in plot \ref{fig:phase}, that there is an offset of the first minimum 
+  \noindent It can be seen in plot \ref{fig:phase}, that there is an offset of the first minimum 
   and $phase = 0$ of $ 0.338$. That implies a period change of the system. As can be extracted from
   the other groups data, which had to be shifted by a phase of 
   $+0.674$, the period change is quite big. This developement should be 
