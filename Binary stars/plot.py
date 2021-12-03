@@ -88,14 +88,15 @@ for i in range(0,d):
                 btime[b] = otime[i]
                 b=b+1
             else:
-                rstars[0,c] = stars[i]  
-                rstars[1,c] = stars[i+1]
-                rstars[2,c] = stars[i+2] 
-                rdiff[0,c] = stars[i+1]-stars[i]
-                rdiff[1,c] = stars[i+2]-stars[i]
-                rdiff[2,c] = stars[i+2]-stars[i+1]
-                rtime[c] = otime[i]
-                c=c+1
+                if (ifilter[i]=="R"):
+                    rstars[0,c] = stars[i]  
+                    rstars[1,c] = stars[i+1]
+                    rstars[2,c] = stars[i+2] 
+                    rdiff[0,c] = stars[i+1]-stars[i]
+                    rdiff[1,c] = stars[i+2]-stars[i]
+                    rdiff[2,c] = stars[i+2]-stars[i+1]
+                    rtime[c] = otime[i]
+                    c=c+1
 
 #np.savetxt('Vdiff21.txt', np.column_stack([Un, N])vdiff[0,:], fmt='%r', delimiter=', ', newline='\n', header='', encoding=None)
 k=0
@@ -112,8 +113,8 @@ plt.savefig('V-Filter.pdf')
 k=k+1
 plt.figure(k)
 plt.errorbar(vtime, unp.nominal_values(np.array(vstars[0,:])), yerr=unp.std_devs(vstars[0,:]), xerr=None, fmt='g.', linewidth=0.05, label='V-Filter', markersize=1)
-plt.errorbar(btime, unp.nominal_values(np.array(bstars[1,:])), yerr=unp.std_devs(bstars[1,:]), xerr=None, fmt='b.', linewidth=0.05, label='B-Filter', markersize=1)
-plt.errorbar(rtime, unp.nominal_values(np.array(rstars[2,:])), yerr=unp.std_devs(rstars[2,:]), xerr=None, fmt='r.', linewidth=0.05, label='R-Filter', markersize=1)
+plt.errorbar(btime, unp.nominal_values(np.array(bstars[0,:])), yerr=unp.std_devs(bstars[1,:]), xerr=None, fmt='b.', linewidth=0.05, label='B-Filter', markersize=1)
+plt.errorbar(rtime, unp.nominal_values(np.array(rstars[0,:])), yerr=unp.std_devs(rstars[2,:]), xerr=None, fmt='r.', linewidth=0.05, label='R-Filter', markersize=1)
 plt.legend()
 plt.title('Depiction of the recorded CCD data')
 plt.xlabel(r'local time [s]')
@@ -185,18 +186,17 @@ for i in range(0, len(grphase)-1):
 
 k=k+1
 plt.figure(k)
-plt.errorbar(gbphase, gb21-0.59, yerr=gberr21, xerr=None, fmt='bx', linewidth=0.05, label='diff21 from supplementary data', markersize=1)
-plt.errorbar(gvphase, gv21-0.56, yerr=gverr21, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
-plt.errorbar(grphase, gr21, yerr=grerr31, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
+plt.errorbar(gbphase, gb21-0.61, yerr=gberr21, xerr=None, fmt='bx', linewidth=0.05, label='diff21 from supplementary data', markersize=1)
+plt.errorbar(gvphase, gv21-0.4, yerr=gverr21, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
+plt.errorbar(grphase, gr21-1.45, yerr=grerr31, xerr=None, fmt='bx', linewidth=0.05, markersize=1)
 plt.errorbar(vtime, unp.nominal_values(np.array(vdiff[0,:])), yerr=unp.std_devs(vdiff[0,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, label='diff21', markersize=1)
-plt.errorbar(btime, unp.nominal_values(np.array(bdiff[1,:])), yerr=unp.std_devs(bdiff[1,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, markersize=1)
-plt.errorbar(rtime, unp.nominal_values(np.array(rdiff[2,:])), yerr=unp.std_devs(rdiff[2,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, markersize=1)
+plt.errorbar(btime, unp.nominal_values(np.array(bdiff[0,:])), yerr=unp.std_devs(bdiff[0,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, markersize=1)
+plt.errorbar(rtime, unp.nominal_values(np.array(rdiff[0,:])), yerr=unp.std_devs(rdiff[0,:]), xerr=None, color='#000000', fmt='.', linewidth=0.05, markersize=1)
 plt.legend()
 plt.title("Light Curve for SW Lac" )
 plt.xlabel(r'Phase')
 plt.ylabel(r'$\Delta$ mag')
-
-#plt.savefig('gdPhase.pdf')
+plt.savefig('gdPhase.pdf')
 
 ############################################################################################
 #

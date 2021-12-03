@@ -7,8 +7,9 @@
 \contentsline {section}{\numberline {5}Results and Conclusions}{5}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Data}{5}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Ensemble Photometry}{6}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Phase}{8}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Conclusion}{9}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Discussion}{10}{subsection.5.5}%
-\contentsline {section}{\numberline {6}References}{10}{section.6}%
+\contentsline {subsection}{\numberline {5.3}Phase}{7}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Conclusion}{8}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Discussion}{9}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Acknowledgements}{9}{section.6}%
+\contentsline {section}{\numberline {7}References}{9}{section.7}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

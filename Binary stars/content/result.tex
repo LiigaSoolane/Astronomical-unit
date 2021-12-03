@@ -1,6 +1,9 @@
 \section{Results and Conclusions}
 \label{sec:make}
 
+\noindent The uncertainties in the following procedure were calculated with the package 
+  uncertainties from python (Olivier et al.).
+
 \subsection{Data}
   \label{sec:America}
   From the data collected of SW Lacertae the Magnitude over time is graphically displayed in the following depiction.
@@ -16,13 +19,11 @@
   to the other side of the sky (East and West). The slight diverge towards the meridian flip vanishes when taking the 
   difference of magnitudes from SW Lacertae and a comparison star. This is consistent with the 
   assumtion that it is a telescope or light disturbance artefact.\\
-  \noindent The uncertainties in the following procedure were calculated with the package 
-  uncertainties from python (Olivier et al.).
   
 \subsection{Ensemble Photometry}
   \label{sec:great}
   The method of comparison stars was used in order to excluded errors as a result 
-  from different exposures to external light sources. 
+  from different exposures to external light sources and other camera uncertainties. 
   Hence, the magnitude of the star was not utilized, but the difference between the star’s 
   magnitude and the magnitude of the comparison stars. For this study, the stars 
   (1) TYC 3215-1586-1 and (2) TYC 3215-1406-1 were chosen as comparison stars. 
@@ -67,14 +68,7 @@
   \begin{equation}
     phase = \dfrac{((E_{measurements}-E_{min})\ \% \ period)}{period}.
   \end{equation}
-  This leads to the following results:
-  \begin{figure}[H]
-    \centering
-    \includegraphics{gdPhase.pdf}
-    \caption{Magnitude difference plotted against the Phase; contains data from another group. Their data is phase-shifted, so that it matches with our observations.}
-    \label{fig:phase}
-  \end{figure}
-  \noindent As mentioned before, the smaller gap in our data is caused by the meridian flip. 
+  This leads to the results, displayed in figure \ref{phase}. As mentioned before, the smaller gap in our data is caused by the meridian flip. 
   Due to difficulties whith the telescope camera shutter, the observations had to be terminated
   before a whole period could be observed. Therefore, there is a bigger gap in the 
   data. For this reason, data gathered from another group was included to complete our graph. 
@@ -83,7 +77,13 @@
   a phase of $+0.647$ was added. Due to the fact, that the supplementary data had other 
   comparison star and different exposure times, the light curves are also shifted in their
   magnitude. Therefore, the magnitude of the other groups data was also shifted
-  by $-0.59$ for V-filter and $-0.56$ for B-filter.\\
+  by $-0.4$ for V-filter, $-0.61$ for B-filter and $-1.45$ for R-filter.\\
+  \begin{figure}[H]
+    \centering
+    \includegraphics{gdPhase.pdf}
+    \caption{Magnitude difference plotted against the Phase; contains data from another group. Their data is shifted, so that it matches with our observations.}
+    \label{fig:phase}
+  \end{figure}
  
 \subsection{Conclusion}
   \label{sec:fuckoff}
@@ -92,26 +92,41 @@
   The lightcurves of both observation nights coincide with each other and therefore, 
   it can be presumed, that the supplementary data will deliver results that match those of our 
   observations.\\
-  \noindent It can be seen in figure \ref{fig:phase}, that there is an offset of the first minimum 
+  \noindent The detected magnitude amplitude of SW Lacertae variability is $0.58$. 
+  It can be seen in figure \ref{fig:phase}, that there is an offset of the first minimum 
   and $phase = 0$ of $ 0.338$. That implies a period change of the system. As can be extracted from
   the other groups data, which had to be shifted by a phase of 
   $+0.674$, the period change is quite big. This developement should be 
   further researched, because it could lead to new knowlegde on mass transfer of contact binary
   star systems.\\
-  \noindent As expected, the Minima are of different magnitudes. This is caused by the different brightness
-  of the two stars. The discrepancy of the magnitudes of the Maxima has a different reason. The source 
+  \noindent As expected, the Minima are to be found at a quater phase after the Minima and
+  of different magnitudes. This is caused by the different brightness
+  of the two stars. The discrepancy of the magnitudes of the Maxima of $0.17$ has a different reason. The source 
   of this discrepancy lies in the McConnel effect. It is common for contact binary star systems 
   and is connected to cold star spots.
 
 \subsection{Discussion}
   \label{sec:orange}
-  \noindentThere were many factors that could have contributed to errors in the data we collected. This includes external light sources such as
-  passing cars and street lights from the university. During observing, the camera shutter failed because of the short exposure times
-  , and in turn streaks of light and dark patches were present in a majority of the data. This lead to an incomplete phase observation
-  because our time was limited and we had to discard a lot of images. That is why it was necessary to use data from groups with the object SW Lac
-  that we're able to collect a complete phase. Many uncertainties were also considered but not completely mitigated such as the auto guider, atmospheric changes, dust particles, and our bias images. We analyzed our observations, and although limited, the data was consistent with the additional data provided by Gordon Hageman and Cameron Piotti.
+  \noindent There were many factors that could have contributed to errors in the data we collected. 
+  This includes external light sources such as
+  passing cars and street lights from the university. Many uncertainties were also considered but not 
+  completely mitigated such as the auto guider, atmospheric changes, dust particles, and sources of error of the CCD.
+  The latter was counteracted with Bias, Dark and Flat Field images and the comparison star method.
+  During observing, the camera shutter failed 
+  because of the short exposure times, 
+  and in turn streaks of light and dark patches were present in a majority of the data. Those data
+  was discarded, but the camera shutter failure leaded to an incomplete phase of observation.
+  That is, why it was necessary to use data from groups with the object SW Lac
+  in order to have access to data over a complete phase. We analyzed our observations, and although limited, 
+  the data was consistent with the additional 
+  data provided by Gordon Hageman and Cameron Piotti. \\
+  In general, both data sets proved a clear trend toward the expected light curve and displayed only little
+  deviations from it, which were caused by the above mentioned sources of error. For the analysis, those 
+  uncertainties didn't had an objectionable influence, because the focuss laid on the phase.
   
 \section{Acknowledgements}
-(( not sure what the label should be ))
-
-\noindent We would like to acknowledge the Atmospheric Research Observatory and the operators who helped us collect our data. We would like to thank Gordon Hageman and Cameron Piotti for generously sharing their data so we could complete our phase curve. We would like to thank Edwin Anderson for allowing us this opportunity to carry out this research. 
+  \label{sec:gordon}
+  \noindent We would like to acknowledge the Atmospheric Research Observatory and the operators who 
+  helped us collect our data. We would like to thank Gordon Hageman and Cameron Piotti for generously 
+  sharing their data so we could complete our phase curve. We would like to thank Edwin Anderson for 
+  allowing us this opportunity to carry out this research. 
